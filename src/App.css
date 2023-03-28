@@ -124,6 +124,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  cursor: pointer;
 }
 
 .upper .title {
@@ -226,6 +227,7 @@ body {
   gap: 1rem;
   padding: 1rem;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .right {
@@ -262,6 +264,7 @@ body {
   justify-content: space-between;
   padding: 2rem;
   border-radius: 10px;
+  cursor: pointer;
   background-image: linear-gradient(to right, #76be7a, #12e43b);
 }
 .plan-card img{

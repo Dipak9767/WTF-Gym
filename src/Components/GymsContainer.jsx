@@ -30,7 +30,7 @@ const GymsContainer = ({ gyms }) => {
               </div>
               <div className="lower">
                 <p className="price">{+gym.plan_price ? ("$" + gym.plan_price) : '$ 222 per month'}</p>
-                <button>Book Now</button>
+                <button onClick={() => singleGym(gym)}>Book Now</button>
               </div>
             </div>
           </div>
