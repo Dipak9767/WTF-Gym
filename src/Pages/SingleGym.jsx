@@ -9,8 +9,9 @@ const SingleGym = () => {
 
   const fetchPlans = async () => {
     try {
-      const res = await axios.post('https://devapi.wtfup.me/gym/plan?gym_id=GLKdIYAWDS2Q8')
+      const res = await axios.post(`https://devapi.wtfup.me/gym/plan?gym_id=${gymInfo.user_id}`)
       setPlans(res.data.data)
+      console.log(res.data.data)
     } catch (error) {
       console.log(error)
     }
