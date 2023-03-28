@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './Pages/Home';
+import SingleGym from './Pages/SingleGym';
+import { GymContext } from './Context';
+import { useState } from 'react';
 
 function App() {
+  const [gymInfo, setGymInfo] = useState(null)
+  const [terms , setTerms] = useState(null)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GymContext.Provider value={{gymInfo , setGymInfo ,terms , setTerms}}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/gym' element={<SingleGym />} />
+        </Routes>
+      </BrowserRouter>
+    </GymContext.Provider>
   );
 }
 
